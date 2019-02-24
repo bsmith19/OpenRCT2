@@ -1073,18 +1073,15 @@ void load_from_sv6(const char* path)
     }
     catch (const ObjectLoadException&)
     {
-        gErrorType = ERROR_TYPE_FILE_LOAD;
-        gErrorStringId = STR_FILE_CONTAINS_INVALID_DATA;
+        context_show_error(STR_UNABLE_TO_LOAD_FILE, STR_FILE_CONTAINS_INVALID_DATA);
     }
     catch (const IOException&)
     {
-        gErrorType = ERROR_TYPE_FILE_LOAD;
-        gErrorStringId = STR_GAME_SAVE_FAILED;
+        context_show_error(STR_UNABLE_TO_LOAD_FILE, STR_GAME_SAVE_FAILED);
     }
     catch (const std::exception&)
     {
-        gErrorType = ERROR_TYPE_FILE_LOAD;
-        gErrorStringId = STR_FILE_CONTAINS_INVALID_DATA;
+        context_show_error(STR_UNABLE_TO_LOAD_FILE, STR_FILE_CONTAINS_INVALID_DATA);
     }
 }
 
@@ -1109,18 +1106,15 @@ void load_from_sc6(const char* path)
     }
     catch (const ObjectLoadException&)
     {
-        gErrorType = ERROR_TYPE_FILE_LOAD;
-        gErrorStringId = STR_GAME_SAVE_FAILED;
+        context_show_error(STR_UNABLE_TO_LOAD_FILE, STR_GAME_SAVE_FAILED);
     }
     catch (const IOException&)
     {
-        gErrorType = ERROR_TYPE_FILE_LOAD;
-        gErrorStringId = STR_GAME_SAVE_FAILED;
+        context_show_error(STR_UNABLE_TO_LOAD_FILE, STR_GAME_SAVE_FAILED);
     }
     catch (const std::exception&)
     {
-        gErrorType = ERROR_TYPE_FILE_LOAD;
-        gErrorStringId = STR_FILE_CONTAINS_INVALID_DATA;
+        context_show_error(STR_UNABLE_TO_LOAD_FILE, STR_FILE_CONTAINS_INVALID_DATA);
     }
     gScreenAge = 0;
     gLastAutoSaveUpdate = AUTOSAVE_PAUSE;

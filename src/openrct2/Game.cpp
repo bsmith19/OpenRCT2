@@ -102,7 +102,6 @@ int32_t game_command_playerid = -1;
 
 rct_string_id gGameCommandErrorTitle;
 rct_string_id gGameCommandErrorText;
-uint8_t gErrorType;
 rct_string_id gErrorStringId;
 
 using namespace OpenRCT2;
